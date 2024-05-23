@@ -18,12 +18,14 @@ html, body{
     height: 100vh;
     width: 100vw;
     background-color: #010409;
+    /* overflow: hidden; */
 }
 
 .home-content{
     height: 100vh;
     width: 100vw;
     /* background-color: #010409;  */
+    /* overflow: hidden; */
 }
 
 nav{
@@ -376,7 +378,6 @@ section{
     color: #338cea;
     font-family: "Montserrat";
     text-transform: uppercase;
-    /* padding: 0vw 45vw; */
     margin-left: 42vw;
     margin-top: -8vw;
 }
@@ -394,7 +395,7 @@ section{
     width: 100vw;
     color: white;
     background-color: #010409;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .skills h1{
@@ -403,138 +404,180 @@ section{
     font-family: "Montserrat";
     text-transform: uppercase;
     padding: 2vw 45vw;
-
 }
+
 
 .skill-section{
-    padding: 4vw 0vw ;
-}
-
-.frontend{
     display: flex;
-    width: 26vw;
-    /* background-color: red; */
-    text-align: center;
+    margin-left: -30vw;
 }
 
-.frontend h2{
-    font-size: 1.7vw;
+.tab{
+    /* font-size: 10vw; */
+    margin-top: 8vw;
+    margin-left: 40vw; 
+}
+
+#tab1{
+    padding: 1vw 4vw;
+    background-color: transparent;
+    border: 2px solid #338cea;
     color: white;
-    font-family: "poppins";
-    text-transform: uppercase;
-    padding: 3vw 10vw;
-    font-weight: 400;
-    /* margin-left: 5vw; */
     cursor: pointer;
+    /* margin-top: 20vw; */
 }
 
+#tab2{
+    padding: 1vw 4.4vw ;
+    background-color: transparent;
+    border: 2px solid #338cea;
+    color: white;
+    cursor: pointer;
+    margin-top: 3vw;
+}
 
-.frontend-content p{
+#tab3{
+    padding: 1vw 1.8vw ;
+    background-color: transparent;
+    border: 2px solid #338cea;
+    color: white;
+    cursor: pointer;
+    margin-top: 3vw;
+
+}
+
+.txt{
+    margin-top: 3vw;
     margin-left: 15vw;
-    background-color: red;
-    width: 50vw;
 }
 
-.backend{
+button{
+    border: none;
+    width: 17vw;
+}
+
+.progress-bars{
+    list-style-type: none;
+    /* padding: 1vw; */
+    color: #fff;
+    /* background: #111; */
+    /* border-radius: 1.5vw; */
+    width: 50vw;
+    box-shadow: 0 0 15px #010409;
+    /* margin: 0em auto; */
+    /* margin-left: 13vw; */
+}
+
+.progress-bars h3{
+    font-size: 1vw;
+    color: #A0A0A0;
+    font-family: "poppins";
+    font-weight: 400;
+    /* margin: 0.5em 1em; */
+    /* margin-left: -20vw; */
+}
+
+.progress-bars li{
+    width: 100%;
+    position: relative;
     display: flex;
-    width: 26vw;
-    /* background-color: red; */
-    text-align: center;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
-.backend h2{
-    font-size: 1.7vw;
-    color: white;
-    /* background-color: rebeccapurple; */
+.bar{
+    width: 85%;
+    height: 0.4vw;
+    background-color: #010409;
+    box-shadow: 
+        inset -1px -1px #A0A0A0,
+        inset 1px 1px 8px #010409;
+    border-radius: 10px;
+    margin: 2vw 0;
+}
+
+.progress{
+    background: linear-gradient(90deg, #338cea, #70adff);
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    position: relative;
+    box-shadow: 0 0 3px #70adff;
+}
+
+.progress::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1vw;
+    height: 100%;
+    background: #fff;
+    border-radius: inherit;
+    box-shadow: 0 0 20px #fff;
+}
+
+.percentage{
+    font-weight: 500;
     font-family: "poppins";
-    text-transform: uppercase;
-    padding: 3vw 10vw;
-    font-weight: 400;
-    cursor: pointer;
-
+    color: #f1f1f1;
+    text-shadow: 0 0 5px #305e9c;
 }
 
-.backend-content p{
-    margin-left: 15vw;
-    background-color: red;
-    width: 50vw;
+@media screen and (max-width: 800px) {
+    .progress-bars {
+        width: 80%;
+    }
 }
-
 
 .dsa{
-    /* width: 28vw; */
-    padding: 2vw 3vw;
-    /* background-color: red; */
-    display: flex;
-}
-
-.dsa h2{
-    font-size: 1.7vw;
-    color: white;
     font-family: "poppins";
-    text-transform: uppercase;
-    padding: 3vw 4vw;
-    font-weight: 400;
-    cursor: pointer;
+    margin-left: -3vw;
+    margin-top: -1vw;
 }
-
 
 .dsa-top{
     display: flex;
-    margin-top: -20vw;
-    color: white;
-    width: 60vw;
-    margin-left: 10vw;
-}
-
-.dsa-top h4{
-    font-size: 1.8vw;
-    font-family: "poppins";
-    font-weight: 500;
 }
 
 .dsa-top p{
     width: 30vw;
-    font-size: 1vw;
-    font-family: "poppins";
     color: #A0A0A0;
+    margin-top: 0.5vw;
+}
+
+.p h3{
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dev a img{
+    margin-left: 2vw;
+    margin-top: -3vw;
+}
+
+.dsa-bottom h3{
+    position: absolute;
+    margin-top: -2vw;
+    /* color: white; */
     font-weight: 500;
+    font-family: "Montserrat";
+    text-transform: uppercase;
 }
 
-.dsa-top .box{
-    width: 30vw;
-    height: 60vh;
-    /* background-color: red; */
-    margin-left: 10vw;
-    border: 2px solid white;
+.dsa-bottom img{
+    /* border: 2px solid #338cea; */
+    box-shadow: 0 0 15px #305e9c;
+    height: 11vw;
+    margin-top : 1vw;
+    /* margin-left: 2vw; */
+    /* margin-top: 2vw; */
 }
-
-.leetcode{
-    width: 38vw;
-    height: 10vw;
-    border: 2px solid white;
-    margin-top: -12vw;
-    margin-left: 10vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .project{
-    height: 260%;
+    height: 165%;
     width: 100%;
     background-color: #010409;
 }
@@ -554,6 +597,48 @@ section{
     padding: 2vw 4vw;
 }
 
+.proj img{
+    width: 20vw;
+    border: 2px solid white;
+    transition: transform 0.5s;
+
+}
+
+.proj-txt i{
+    font-size: 1.5vw;
+    /* margin-right: 5vw;    */
+    /* margin-top: 5vw; */
+    /* opacity: 0; */
+    color: #338cea;
+    /* text-decoration: none; */
+}
+
+.proj-txt .title{
+    display: flex;
+}
+
+.proj-txt a{
+    margin-top: 2vw;
+
+    text-decoration: none;
+}
+
+.proj:hover img{
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+
+
+.proj img:hover .work-icon i{
+    opacity: 1;
+}
+
+.proj img:hover .layer{
+    height: 100%;
+    /* opacity: 0.5; */
+}
+
+
 .proj-txt{
     font-family: "poppins";
     margin-left: 2vw;
@@ -561,33 +646,29 @@ section{
 
 .proj-txt h3{
     font-size: 1.8vw;
+    font-weight: 500;
+    font-family: "Montserrat";
 }
 .proj-txt p{
     /* font-size: 2vw; */
     color: #A0A0A0;
+    /* width: 50%; */
 }
-
-
-.proj img{
-    width: 25vw;
-    border: 2px solid white;
-}
-
 
 .contact{
     height: 100vh;
     width: 100vw;   
-    background-color: black;
+    background-color: #010409;
     font-family: "poppins";
     display: flex;
 }
-
 
 .contact h1{
     color: white;
     font-size: 6vw;
     padding: 4vw 7vw;
     font-weight: 400;
+    margin-top: 2vw;
 }
 
 .contact img{
@@ -598,6 +679,7 @@ section{
 .contact-info{
     width: 45%;
 }
+
 
 .footer{
     display: flex;
@@ -634,7 +716,7 @@ section{
     display: flex;
     gap: 1vw;
     align-items: center;
-    color: white;
+    color: #338cea;
     padding: 5vw 16vw;
     /* text-transform: lowercase; */
 }
@@ -654,8 +736,9 @@ section{
 }
 
 .form{
-    width: 70%;
+    width: 40%;
     padding: 8vw 3vw;
+    margin-left: 12vw;
 
 }
 
@@ -672,15 +755,17 @@ section{
     font-family: "poppins";
 }
 
-button{
+#send{
+    width: 25%;
     font-size: 1.2vw;
     font-weight: 600;
     font-family: "Montserrat";
-    background-color: #A0A0A0;
+    background-color: #338cea;
     color: black;
     display: block;
-    padding: 0.7vw 1.5vw;
+    padding: 0.5vw 0.5vw;
     margin-top: 2vw;
     border-radius: 0.3vw;
-    margin-left: 37.5vw;
+    margin-left: 22vw;
+    cursor: pointer;
 }
