@@ -8,7 +8,7 @@ gsap.to("nav", {
       // markers : true,
       start: "top -10%",
       end: "top -11%",
-      scrub: 1
+      scrub:51
   }
 })
 
@@ -143,22 +143,85 @@ tl.from(".i",{
   yoyo:true
 })
 
-tl.from(".sticky_parent",{
+tl.from(".overview-left img",{
   x: -250,
   opacity:0,
   duration:1,
   stagger:0.5,
   scrollTrigger:{
-      trigger: ".sticky_parent",
-      scroller: body,
-      scrub:2,
-      markers:true,
-      start: "top 60%",
-      end: "top 30ñ"
+      trigger: ".overview-left img",
+      scroller: "body",
+      scrub:5,
+      markers:false,
+      start: "top 70%",
+      end: "top 30%"
   }
 })
 
+tl.from(".overview-right h1, .overview-right h3, .overview-right h2, .overview-right p",{
+  y: 50,
+  opacity:0,
+  duration:0.5,
+  stagger:0.5,
+  scrollTrigger:{
+      trigger: ".overview-right",
+      scroller: "body",
+      scrub:5,
+      markers:false,
+      start: "top 80%",
+      end: "top 30%"
 
+  }
+})
+
+tl.from(".social-media h3,",{
+  y: 50,
+  opacity:0,
+  duration:0.5,
+  stagger:0.5,
+  scrollTrigger:{
+      trigger: ".social-media",
+      scroller: "body",
+      scrub:5,
+      markers:false,
+      start: "top 80%",
+      end: "top 30%"
+
+  }
+})
+
+tl.from(".icon a",{
+  y: 50,
+  opacity:0,
+  duration:0.5,
+  stagger:0.5,
+  scrollTrigger:{
+      trigger: ".icon a",
+      scroller: "body",
+      scrub:5,
+      markers:false,
+      start: "top 70%",
+      end: "top 20%"
+
+  }
+})
+
+tl.to(".skills",{
+  x: 50,
+  delay:1,
+  opacity:0,
+  duration:0.5,
+  stagger:0.5,
+  scrollTrigger:{
+      trigger: ".skills h1",
+      scroller: "body",
+      markers:true,
+      scrub:5,
+      start: "top 70%",
+      end: "top 20%"
+
+  }
+})
 
 
 
